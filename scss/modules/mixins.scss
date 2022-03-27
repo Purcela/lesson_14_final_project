@@ -1,9 +1,9 @@
 
 
-@mixin d-flex($display, $justyfy, $align) {
+@mixin d-flex($display, $justyfy, $align-item,) {
         display: $display;
         justify-content: $justyfy;
-        align-items: $align;
+        align-items: $align-item;
 }
 @mixin border($width, $type, $color) {
     border: $width $type $color;
@@ -12,8 +12,12 @@
 @mixin transition-hover($property, $duration, $type, $delay) {
     transition: $property, $duration, $type, $delay ;
 }
-
-
+@mixin pos-abs($position,$top, $left, $x, $y) {
+    position: $position;
+    top: $top;   
+    left: $left;
+    transform:translate($x,$y);
+}
 
 
 
