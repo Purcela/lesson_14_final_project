@@ -54,33 +54,63 @@ a {
 
 @font-face {
   font-family: "Muli regular";
-  src: url("Muli.eot");
-  src: url("Muli.eot?#iefix") format("embedded-opentype"), url("Muli.woff2") format("woff2"), url("Muli.woff") format("woff"), url("Muli.ttf") format("truetype"), url("Muli.svg#Muli") format("svg");
+  src: url("../fonts/Muli-Regular/Muli.eot");
+  src: url("../fonts/Muli-Regular/Muli.eot?#iefix") format("embedded-opentype"), url("../fonts/Muli-Regular/Muli.woff2") format("woff2"), url("../fonts/Muli-Regular/Muli.woff") format("woff"), url("../fonts/Muli-Regular/Muli.ttf") format("truetype"), url("../fonts/Muli-Regular/Muli.svg#Muli") format("svg");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "Playfair Display regular";
-  src: url("PlayfairDisplay-Regular.eot");
-  src: url("PlayfairDisplay-Regular.eot?#iefix") format("embedded-opentype"), url("PlayfairDisplay-Regular.woff2") format("woff2"), url("PlayfairDisplay-Regular.woff") format("woff"), url("PlayfairDisplay-Regular.ttf") format("truetype"), url("PlayfairDisplay-Regular.svg#PlayfairDisplay-Regular") format("svg");
+  src: url("../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.eot");
+  src: url("../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.woff2") format("woff2"), url("../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.woff") format("woff"), url("../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.ttf") format("truetype"), url("../fonts/PlayfairDisplay-Regular/PlayfairDisplay-Regular.svg#PlayfairDisplay-Regular") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-.index-body {
+body {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.index-body .header-wraper .header-color, .index-body .header-wraper {
+body .section-1, body .header-wraper .header-color, body .header-wraper {
   max-width: 1366px;
   width: 100%;
 }
 
-.index-body .header-wraper {
+body .header-wraper .header-nav p::after {
+  content: "";
+  max-width: 1366px;
+  width: 100%;
+  height: 1px;
+  margin-top: 15px;
+  background-color: #FFFFFF;
+  position: absolute;
+  z-index: 2;
+}
+
+body .section-1 .s1-box .s1-minibox p:nth-child(2)::after {
+  content: "";
+  width: 156px;
+  height: 1px;
+  float: right;
+  clear: both;
+  background-color: #51453A;
+}
+
+body .section-1 .s1-box .s1-minibox p:nth-child(4)::after {
+  content: "";
+  width: 60px;
+  height: 1px;
+  margin-top: 8px;
+  float: right;
+  clear: both;
+  background-color: #51453A;
+}
+
+body .header-wraper {
   height: 768px;
   background-image: url(../../img/header.png);
   background-position: center;
@@ -89,34 +119,174 @@ a {
   flex-direction: column;
   position: relative;
 }
-.index-body .header-wraper .header-color {
+body .header-wraper .header-color {
   height: 768px;
   background-color: #51453A;
   position: absolute;
+  z-index: 1;
+  opacity: 0.2;
 }
-.index-body .header-wraper .header-nav {
+body .header-wraper .header-nav {
+  max-width: 1366px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 15px;
+  z-index: 2;
+}
+body .header-wraper .header-nav .header-nav-box {
   max-width: 1057px;
   width: 100%;
-  height: 49px;
   margin: 0 auto;
-  margin-top: 15px;
+  min-height: 49px;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
-.index-body .header-wraper .header-nav h1 {
+@media (max-width: 1100px) {
+  body .header-wraper .header-nav .header-nav-box {
+    justify-content: space-around;
+  }
+}
+body .header-wraper .header-nav .header-nav-box .logo a {
   font-family: "Playfair Display regular";
   font-size: 37px;
   color: #FFFFFF;
 }
-.index-body .header-wraper .header-nav ul {
+body .header-wraper .header-nav .header-nav-box .menu-ul1 {
   width: 361px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.index-body .header-wraper .header-nav ul li a {
+@media (max-width: 768px) {
+  body .header-wraper .header-nav .header-nav-box .menu-ul1 {
+    display: none;
+  }
+}
+body .header-wraper .header-nav .header-nav-box .menu-ul1 li a {
   font-family: "Muli regular";
   font-size: 16px;
   color: #FFFFFF;
+}
+body .header-wraper .header-nav .header-nav-box .burger-icon {
+  display: none;
+}
+@media (max-width: 768px) {
+  body .header-wraper .header-nav .header-nav-box .burger-icon {
+    color: #fff;
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+  }
+}
+body .header-wraper .header-nav .menu-ul {
+  margin: 10px auto;
+  display: none;
+}
+body .header-wraper .header-nav .menu-ul li a {
+  font-family: "Muli regular";
+  font-size: 16px;
+  color: #FFFFFF;
+}
+@media (max-width: 768px) {
+  body .header-wraper .header-nav .menu-ul li a {
+    font-size: 25px;
+  }
+}
+@media (max-width: 768px) {
+  body .header-wraper .header-nav .menu-ul.open-menu {
+    width: 100px;
+    height: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+body .header-wraper h1 {
+  max-width: 570px;
+  width: 100%;
+  height: 172px;
+  font-family: "Playfair Display regular";
+  font-size: 65px;
+  color: #FFFFFF;
+  position: absolute;
+  top: 50%;
+  left: 11.4%;
+  transform: translate(0, -50%);
+  z-index: 2;
+}
+@media (max-width: 770px) {
+  body .header-wraper h1 {
+    max-width: 420px;
+    font-size: 50px;
+    top: 60%;
+  }
+}
+@media (max-width: 480px) {
+  body .header-wraper h1 {
+    max-width: 270px;
+    font-size: 35px;
+  }
+}
+body .section-1 {
+  height: 464px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFF7EC;
+}
+body .section-1 .s1-box {
+  max-width: 1086px;
+  width: 100%;
+  height: 344px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .section-1 .s1-box img {
+  max-width: 528px;
+  height: 344px;
+}
+body .section-1 .s1-box .s1-minibox {
+  max-width: 528px;
+  width: 100%;
+  height: 257px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+body .section-1 .s1-box .s1-minibox h3 {
+  width: 215px;
+  height: 65px;
+  font-family: "Playfair Display regular";
+  font-size: 49px;
+  color: #51453A;
+  padding-top: 8px;
+}
+body .section-1 .s1-box .s1-minibox p:nth-child(3) {
+  width: 100%;
+  height: 80px;
+  font-family: "Muli regular";
+  font-size: 16px;
+  color: #51453A;
+  overflow: hidden;
+}
+body .section-1 .s1-box .s1-minibox p:hover {
+  overflow: auto;
+  background-color: #e6edf0;
+}
+body .section-1 .s1-box .s1-minibox p:nth-child(4) {
+  width: 145px;
+  height: 20px;
+}
+body .section-1 .s1-box .s1-minibox p:nth-child(4) a {
+  font-family: "Muli regular";
+  font-size: 16px;
+  color: #51453A;
 }
