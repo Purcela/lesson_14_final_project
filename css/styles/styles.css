@@ -75,7 +75,7 @@ body {
   align-items: center;
 }
 
-body .section-1, body .header-wraper .header-color, body .header-wraper {
+body .section-2, body .section-1, body .header-wraper .header-color, body .header-wraper {
   max-width: 1366px;
   width: 100%;
 }
@@ -91,7 +91,7 @@ body .header-wraper .header-nav p::after {
   z-index: 2;
 }
 
-body .section-1 .s1-box .s1-minibox p:nth-child(2)::after {
+body .section-2 .s2-box .s2-minibox p:nth-child(2)::after, body .section-1 .s1-box .s1-minibox p:nth-child(2)::after {
   content: "";
   width: 156px;
   height: 1px;
@@ -100,7 +100,7 @@ body .section-1 .s1-box .s1-minibox p:nth-child(2)::after {
   background-color: #51453A;
 }
 
-body .section-1 .s1-box .s1-minibox p:nth-child(4)::after {
+body .section-2 .s2-box .s2-minibox p:nth-child(4)::after, body .section-1 .s1-box .s1-minibox p:nth-child(4)::after {
   content: "";
   width: 60px;
   height: 1px;
@@ -282,11 +282,69 @@ body .section-1 .s1-box .s1-minibox p:hover {
   background-color: #e6edf0;
 }
 body .section-1 .s1-box .s1-minibox p:nth-child(4) {
-  width: 145px;
+  width: 150px;
   height: 20px;
 }
 body .section-1 .s1-box .s1-minibox p:nth-child(4) a {
   font-family: "Muli regular";
   font-size: 16px;
   color: #51453A;
+}
+body .section-2 {
+  height: 464px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+}
+body .section-2 .s2-box {
+  max-width: 1086px;
+  width: 100%;
+  height: 344px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .section-2 .s2-box .s2-minibox {
+  max-width: 528px;
+  width: 100%;
+  height: 257px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column;
+}
+body .section-2 .s2-box .s2-minibox h3 {
+  width: 215px;
+  height: 65px;
+  font-family: "Playfair Display regular";
+  font-size: 49px;
+  color: #51453A;
+  padding-top: 8px;
+}
+body .section-2 .s2-box .s2-minibox p:nth-child(3) {
+  width: 100%;
+  height: 80px;
+  font-family: "Muli regular";
+  font-size: 16px;
+  text-align: end;
+  color: #51453A;
+  overflow: hidden;
+}
+body .section-2 .s2-box .s2-minibox p:hover {
+  overflow: auto;
+  background-color: #e6edf0;
+}
+body .section-2 .s2-box .s2-minibox p:nth-child(4) {
+  width: 145px;
+  height: 20px;
+}
+body .section-2 .s2-box .s2-minibox p:nth-child(4) a {
+  font-family: "Muli regular";
+  font-size: 16px;
+  color: #51453A;
+}
+body .section-2 .s2-box img {
+  max-width: 528px;
+  height: 344px;
 }
