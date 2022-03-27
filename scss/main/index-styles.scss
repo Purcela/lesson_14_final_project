@@ -3,7 +3,7 @@ body {
     .header-wraper {
         @extend %width;
         height: 768px;
-        background-image: url(../../img/header.png);
+        background-image: url(../img/header.png);
         background-position: center;
         background-size: cover;
         display: flex;
