@@ -551,11 +551,200 @@ body {
                     }
                 }
             }
-        }
-        
+        }        
     }
-    
+    .footer {
+        @extend %width;
+        height: 373px;        
+        display: flex;
+        flex-direction: column;
+        .footer-info {
+            @extend %width;
+            height: 293px;
+            @include d-flex(flex, center, center);
+            background-image: url(../img/footer-img.png);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            .footer-color {
+                @extend %width;
+                height: 293px;
+                background-color: #51453A;
+                position: absolute;
+                z-index: 1;
+                opacity: 0.3;
+            }
+            .footer-info-box {
+                @extend %width;
+                height: 113px;
+                @include d-flex(flex, 0, center);
+                position: absolute;
+                z-index: 2;
+                h1 {
+                    width: 118px;
+                    height: 65px;
+                    margin-left: 15.1%;
+                    font-family: $pd-reg;
+                    font-size: 49px;
+                    color: #FFFFFF;
+                }
+                .footer-finde {
+                    width: 249px;
+                    height: 113px;
+                    margin-left: 7%;
+                    @include d-flex(flex, space-between,flex-start);
+                    flex-direction: column;
 
+                    h6 {
+                        width: 96px;
+                        height: 37px;
+                        font-family: $pd-reg;
+                        font-size: 28px;
+                        color: #FFFFFF;
+                    }
+                    p {
+                        width: 249px;
+                        height: 46px;
+                        a {
+                            font-family: $m-reg;
+                            font-size: 16px;
+                            color: #FFFFFF;
+                            line-height: 26px;
+                        }
+                    }
+                }
+                .footer-reserv {
+                    width: 249px;
+                    height: 113px;
+                    margin-left: 2.2%;
+                    @include d-flex(flex, space-between,flex-start);
+                    flex-direction: column;
+                    h6 {
+                        width: 96px;
+                        height: 37px;
+                        font-family: $pd-reg;
+                        font-size: 28px;
+                        color: #FFFFFF;
+                    }
+                    p {
+                        width: 249px;
+                        height: 46px;
+                        a {
+                            font-family: $m-reg;
+                            font-size: 16px;
+                            color: #FFFFFF;
+                            line-height: 26px;
+                        }
+                    }
+                }
+                .footer-opening {
+                    width: 249px;
+                    height: 113px;
+                    margin-left: 2.2%;
+                    @include d-flex(flex, space-between,flex-start);
+                    flex-direction: column;
+                    h6 {
+                        width: 192px;
+                        height: 37px;
+                        font-family: $pd-reg;
+                        font-size: 28px;
+                        color: #FFFFFF;
+                    }
+                    p {
+                        width: 249px;
+                        height: 46px;
+                        font-family: $m-reg;
+                        font-size: 16px;
+                        color: #FFFFFF;
+                        line-height: 26px;
+                    }
+                }
+            }
+        }
+        .footer-copyright {
+            @extend %width;
+            height: 80px;
+            display: flex;
+            background-color: #51453A;
+            .footer-nav {
+                max-width: 1366px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 15px;
+                z-index: 2;
+                .footer-nav-box {
+                    max-width: 1057px;
+                    width: 100%;
+                    margin: $m0a;
+                    min-height: 49px;
+                    height: 100%;
+                    @include d-flex(flex, space-between, center);
+                    flex-wrap: wrap;                
+                    @media ( max-width: 1100px ) {
+                        justify-content: space-around;
+                    }
+                    .logo {
+                        a {
+                            font-family: $pd-reg;
+                            font-size: 37px;
+                            color: #FFFFFF;
+                        }
+                    }
+                    .menu-ul1 {
+                        width: 361px;
+                        @include d-flex(flex, space-between, center);
+                        @media ( max-width: 768px ) {
+                            display: none;                    
+                        }
+                        li{
+                            a {
+                                font-family: $m-reg;
+                                font-size: 16px;
+                                color: #FFFFFF;
+                            }
+                        }
+                    }                
+                    .burger-icon {
+                        display: none;
+                        @media ( max-width: 768px ) {
+                                color: #fff;
+                                display: block;
+                                font-size: 30px;
+                                cursor:pointer;                    
+                        }
+                    }
+                }
+                .menu-ul {
+                    margin: 10px auto;
+                    display: none;                    
+                    li {
+                        a {
+                            font-family: $m-reg;
+                            font-size: 16px;
+                            color: #FFFFFF;
+                            @media ( max-width: 768px ) {
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+                @media (max-width:768px) {
+                    .menu-ul.open-menu {
+                    width: 100px;
+                    height: 170px;
+                    @include d-flex(flex, space-between, center);
+                    flex-direction: column;                    
+                    }
+                }
+                p {
+                    @extend %header-line;                
+                }
+            }
+        }
+
+    }
 
 
 
