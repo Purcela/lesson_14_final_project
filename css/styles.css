@@ -1086,7 +1086,7 @@ body .footer .footer-copyright .footer-nav .menu-ul2 li a {
 }
 
 body .header-wraper-about {
-  background-image: url(../../img/about-img.png);
+  background-image: url(../img/about-img.png);
   height: 580px;
   padding-bottom: 86px;
 }
@@ -1433,7 +1433,7 @@ body .about-section-4 .about-s4-box img {
 }
 
 body .header-wraper-menu {
-  background-image: url(../../img/about-img.png);
+  background-image: url(../img/about-img.png);
   height: 580px;
   padding-bottom: 86px;
 }
