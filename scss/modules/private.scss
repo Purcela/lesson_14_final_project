@@ -18,6 +18,12 @@
     position: absolute;
     z-index: 2;
 }
+%contact-line::after { content:'';
+    max-width: 1366px;
+    width: 100%;
+    height: 1px;
+    background-color: #51453A;
+}
 %under-line::after { content:'';
     width: 156px;
     height: 1px;

@@ -3,7 +3,7 @@ body {
     .header-wraper,
     .header-wraper-about,
     .header-wraper-menu,
-    .header-wraper-galery {
+    .header-wraper-gallery {
         @extend %width;
         height: 768px;
         background-image: url(../img/header-img.png);
@@ -14,7 +14,8 @@ body {
         position: relative;
         .header-color,
         .header-color-about,
-        .header-color-menu {            
+        .header-color-menu,
+        .header-color-gallery {            
             @extend %width;
             height: 768px;
             background-color: #51453A;
@@ -680,6 +681,10 @@ body {
                     p {
                         width: 249px;
                         height: 46px;
+                        font-family: $m-reg;
+                        font-size: 16px;
+                        color: #FFFFFF;
+                        line-height: 26px;
                         a {
                             font-family: $m-reg;
                             font-size: 16px;
